@@ -1,5 +1,6 @@
 package com.afifpermana.pengembalian.services;
 
+import java.text.SimpleDateFormat;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +16,11 @@ public class PengembalianServicesApplication {
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
+    }
+    
+    @Bean
+    public SimpleDateFormat simpleDateFormat(){
+        return new SimpleDateFormat("yyyy-MM-dd");
     }
 
 }

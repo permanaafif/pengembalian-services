@@ -27,6 +27,6 @@ public class Pengembalian {
     private Long peminjamanId;
     private String tglDiKembalikan;
     private int terlambat;
-    private Long denda;
-    
+    private double denda;
+
 }

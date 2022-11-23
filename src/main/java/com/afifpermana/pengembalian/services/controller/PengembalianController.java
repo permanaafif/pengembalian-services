@@ -7,6 +7,7 @@ package com.afifpermana.pengembalian.services.controller;
 import com.afifpermana.pengembalian.services.entity.Pengembalian;
 import com.afifpermana.pengembalian.services.service.PengembalianService;
 import com.afifpermana.pengembalian.services.vo.ResponseTemplateVO;
+import java.text.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +27,7 @@ public class PengembalianController {
     private PengembalianService pengembalianService;
     
     @PostMapping("/")
-    public Pengembalian savePengembalian(@RequestBody Pengembalian pengembalian){
+    public Pengembalian savePengembalian(@RequestBody Pengembalian pengembalian) throws ParseException {
         return pengembalianService.savePengembalian(pengembalian);
     }
     

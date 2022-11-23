@@ -4,7 +4,6 @@
  */
 package com.afifpermana.pengembalian.services.vo;
 
-import com.afifpermana.pengembalian.services.entity.Pengembalian;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,9 +13,12 @@ import lombok.NoArgsConstructor;
  * @author Apip
  */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class ResponseTemplateVO {
-    private Pengembalian pengembalian;
-    private Peminjaman peminjaman; 
+@NoArgsConstructor
+public class Buku {
+    private Long bukuId;
+    private String kode;
+    private String judul;
+    private String penerbit;
+    private String tahunTerbit;
 }
