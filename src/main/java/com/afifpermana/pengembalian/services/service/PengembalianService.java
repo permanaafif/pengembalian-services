@@ -39,6 +39,7 @@ public class PengembalianService {
         long terlambat = kurangTanggal(tglSekarang,peminjaman.getPeminjaman().getTglKembali());
         double denda = terlambat * 500;
         pengembalian.setTerlambat((int)terlambat);
+        pengembalian.setTglDiKembalikan(tglSekarang);
         pengembalian.setDenda(denda);
         return pengembalianRepository.save(pengembalian);
     }
